@@ -1,0 +1,27 @@
+./bax.sh
+roslaunch baxter_gazebo baxter_world.launch
+
+roslaunch huang all_services.launch
+
+rosrun huang baxter_RL.py
+
+rosrun rviz rviz
+
+htop
+
+watch -n 0.05 nvidia-smi
+
+rosrun rqt_image_view rqt_image_view
+
+rostopic echo /reward_Publisher
+
+------------------------------------------
+
+sudo leapd
+
+./bax.sh
+roslaunch baxter_gazebo baxter_world.launch
+
+roslaunch leap_motion sensor_sender.launch 
+
+rosrun leap_motion_Baxter bax_leap_teleoperate.py

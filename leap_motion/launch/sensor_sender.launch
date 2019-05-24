@@ -1,0 +1,10 @@
+<launch>
+  <arg name="freq_prefix" default="_freq" />
+  <arg name="freq_value" default="1" />
+  <arg name="freq_limit" default="50" />
+
+  <node name="Leap_publisher" 
+        pkg="leap_motion" type="sender.py" args="$(arg freq_prefix):=$(arg freq_value)" />
+  <node name="leap_hand_pos_ori_service"
+        pkg="leap_motion" type="leap_hand_pos_ori_service.py"/>
+</launch>

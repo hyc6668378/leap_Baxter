@@ -1,0 +1,6 @@
+---
+geometry_msgs/Vector3 hand_direction
+geometry_msgs/Vector3 hand_normal
+geometry_msgs/Point hand_palm_pos
+geometry_msgs/Vector3 hand_roll_pitch_yaw
+float64  gripper
